@@ -1,15 +1,7 @@
-from prefect import task, Flow, Parameter
-
-@task(log_stdout=True)
 def say_hello(name):
     print("Hello, {}!".format(name))
 
-with Flow("My First Flow") as flow:
-    name = Parameter('name')
-    say_hello(name)
-
-flow.run(name='Python')
-flow.run(name='Bash')
+say_hello('bash')
 
 
 
