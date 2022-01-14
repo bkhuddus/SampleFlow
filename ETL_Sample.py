@@ -6,7 +6,7 @@ def extract():
 
 @task
 def transform(x):
-	return [i * 10 for i in x]
+	return [i * 50 for i in x]
 
 @task
 def load(y):
