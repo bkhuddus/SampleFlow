@@ -21,8 +21,10 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
+    pip install prefect
   displayName: 'Install dependencies'
 
 - script: |
     python Hello.py
+    python ETL_Sample.py
   displayName: 'Hello.py'
